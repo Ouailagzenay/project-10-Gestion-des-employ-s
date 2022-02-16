@@ -23,7 +23,7 @@
             ?>
 
             <tr>
-                <td><?= $person[1]?></td>
+                <td><?= $person[1]?></td>    <!-- ?php echo -->
                 <td><?= $person[2]?></td>
                 <td><?= $person[3]?></td>
                 <td>
