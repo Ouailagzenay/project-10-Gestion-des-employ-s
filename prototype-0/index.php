@@ -4,7 +4,7 @@
 $getfile = file_get_contents('people.json');
 $data = json_decode($getfile);
 ?>
-<div class="container">
+<div >
 		<a href="insert.php"><i></i> Insert Data</a>
 			<table>
 				<tr>
@@ -12,15 +12,11 @@ $data = json_decode($getfile);
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Age</th>
-					<th>Gender</th>
-					<th>Action</th>
+					
 				</tr>		
-				<?php $index=0;foreach ($data as $person){
-				$index++;  
-				
+				<? foreach ($data as $person){
 				?>
 				<tr>
-					<td><?php echo $index; ?></td>
 					<td><?php echo $person[0];?></td>
 					<td><?php echo $person[1]; ?></td>
 					<td><?php echo $person[2]; ?></td>
