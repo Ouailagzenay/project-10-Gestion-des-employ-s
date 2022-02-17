@@ -1,29 +1,29 @@
 <?php
 
-    $person;
+    
     if(isset($_GET['id'])){
         $data = json_decode(file_get_contents('people.json'));
 
-        foreach($data as $i){
-            if($i[0]== $_GET['id']){
-                $person = $i;
+        foreach($data as $value){
+            if($value[0]== $_GET['id']){
+                $editPerson = $value;
                 break;
             }
         }
     }
 
     if(!empty($_POST)){
-		$id = uniqid(false);
+		$id = uniqid();
         $firstName = $_POST['fname'];
         $lastName = $_POST['lname'];
         $age = $_POST['age'];
-        $personToCahnge = array($id, $firstName, $lastName, $age);
+        $editPerson = array($id, $firstName, $lastName, $age);
         $file = file_get_contents('people.json');
-        $data = json_decode($file, true);
+        $data = json_decode($file);
 
        for($i = 0; $i < count($data); $i++){
         if($data[$i][0]== $_GET['id']){
-            $data[$i] = $personToCahnge;
+            $data[$i] = $editPerson;
             break;
         }
        }
@@ -42,19 +42,19 @@
         <form method="POST" action="">
 			<div>
 				<label for="inputFName">First Name</label>
-				<input type="text" required="required" id="inputFName" value=<?= $person[1]?> name="fname" placeholder="First Name">
+				<input type="text" required="required" id="inputFName" value=<?= $editPerson[1]?> name="fname" placeholder="First Name">
 				<span></span>
 			</div   >
 			
 			<div>
 				<label for="inputLName">Last Name</label>
-				<input type="text" required="required" id="inputLName" value=<?= $person[2] ?> name="lname" placeholder="Last Name">
+				<input type="text" required="required" id="inputLName" value=<?= $editPerson[2] ?> name="lname" placeholder="Last Name">
         		<span></span>
 			</div>
 			
 			<div>
 				<label for="inputAge">Age</label>
-				<input type="number" required="required" class="form-control" value=<?= $person[3] ?> id="inputAge" name="age" placeholder="Age">
+				<input type="number" required="required" class="form-control" value=<?= $editPerson[3] ?> id="inputAge" name="age" placeholder="Age">
 				<span></span>
 			</div>
     

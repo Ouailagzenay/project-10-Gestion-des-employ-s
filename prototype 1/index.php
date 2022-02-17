@@ -17,17 +17,17 @@
             </tr>
 
             <?
-                    foreach($data as $person){
+                    foreach($data as $value){
                     
             ?>
 
             <tr>
-                <td><?= $person[1]?></td>    <!-- ?php echo -->
-                <td><?= $person[2]?></td>
-                <td><?= $person[3]?></td>
+                <td><?= $value[1]?></td>    <!-- ?php echo -->
+                <td><?= $value[2]?></td>
+                <td><?= $value[3]?></td>
                 <td>
-                    <a href="edit.php?id=<?php echo $person[0] ?>">Edit</a>
-                    <a href="delete.php?id=<?php echo $person[0] ?>">delete</a>
+                    <a href="edit.php?id=<?php echo $value[0] ?>">Edit</a>
+                    <a href="delete.php?id=<?php echo $value[0] ?>">delete</a>
                 </td>
             </tr>
             <?php }?>

@@ -1,12 +1,12 @@
 <?php
     if(!empty($_POST)){
-		$id = uniqid(false);
+		$id = uniqid();
         $firstName = $_POST['fname'];
         $lastName = $_POST['lname'];
         $age = $_POST['age'];
         $person = array($id, $firstName, $lastName, $age);
         $file = file_get_contents('people.json');
-        $data = json_decode($file, true);
+        $data = json_decode($file);
         array_push($data, $person);
         file_put_contents('people.json', json_encode($data));
         header("Location: index.php");
