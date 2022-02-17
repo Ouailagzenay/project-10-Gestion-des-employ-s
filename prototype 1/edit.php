@@ -42,19 +42,19 @@
         <form method="POST" action="">
 			<div>
 				<label for="inputFName">First Name</label>
-				<input type="text" required="required" id="inputFName" value=<?= $editPerson[1]?> name="fname" placeholder="First Name">
+				<input type="text" required id="inputFName" value=<?= $editPerson[1]?> name="fname" placeholder="First Name">
 				<span></span>
 			</div   >
 			
 			<div>
 				<label for="inputLName">Last Name</label>
-				<input type="text" required="required" id="inputLName" value=<?= $editPerson[2] ?> name="lname" placeholder="Last Name">
+				<input type="text" required id="inputLName" value=<?= $editPerson[2] ?> name="lname" placeholder="Last Name">
         		<span></span>
 			</div>
 			
 			<div>
 				<label for="inputAge">Age</label>
-				<input type="number" required="required" class="form-control" value=<?= $editPerson[3] ?> id="inputAge" name="age" placeholder="Age">
+				<input type="number" required class="form-control" value=<?= $editPerson[3] ?> id="inputAge" name="age" placeholder="Age">
 				<span></span>
 			</div>
     
