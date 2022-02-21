@@ -41,16 +41,6 @@
 				<input type="number" required="required" class="form-control" id="inputAge" name="age" placeholder="Age">
 				<span></span>
 			</div>
-				<div class="form-group">
-					<label for="inputGender">Gender</label>
-					<select class="form-control" required="required" id="inputGender" name="gender" >
-						<option>Please Select</option>
-						<option value="Male">Male</option>
-						<option value="Female">Female</option>
-					</select>
-					<span></span>
-        		</div>
-    
 			<div class="form-actions">
 					<button type="submit">Create</button>
 					<a href="index.php">Back</a>
