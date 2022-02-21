@@ -12,7 +12,7 @@
         $person->setLastName($_POST['lname']);
         $person->setAge($_POST['age']);
 
-		$personManager->insertEmployee($conn, $person);
+		$personManager->insertperson($conn, $person);
      
         header("Location: index.php");
 
