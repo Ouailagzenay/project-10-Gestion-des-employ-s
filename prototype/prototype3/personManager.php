@@ -10,7 +10,7 @@
         }
 
 
-        public function insertEmployee($conn, $person){
+        public function insertperson($conn, $person){
             $firstName = $person->getFirstName();
             $lastName = $person->getLastName();
             $age = $person->getAge();
