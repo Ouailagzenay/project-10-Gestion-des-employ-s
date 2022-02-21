@@ -14,8 +14,8 @@
         <a href="insert.php">Insert Data</a>
         <table>
             <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th>Prenom</th>
+                <th>Nom</th>
                 <th>Age</th>
                 <th>Action</th>
             </tr>
@@ -29,8 +29,8 @@
                 <td><?= $value['nom']?></td>
                 <td><?= $value['age']?></td>
                 <td>
-                    <a href="edit.php?id=<?php echo $value['id'] ?>">Edit</a>
-                    <a href="delete.php?id=<?php echo $value['id'] ?>">delete</a>
+                    <a href="edit.php?id=<?php echo $value['id'] ?>">Moffier</a>
+                    <a href="delete.php?id=<?php echo $value['id'] ?>">suprimer</a>
                 </td>
             </tr>
             <?php }?>

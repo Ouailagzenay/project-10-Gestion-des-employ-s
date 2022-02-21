@@ -10,15 +10,15 @@
         }
 
 
-        public function insertEmployee($conn, $person){
-            $firstName = $person->getFirstName();
-            $lastName = $person->getLastName();
+        public function insertPerson($conn, $person){
+            $prenom = $person->getprenom();
+            $nom = $person->getnom();
             $age = $person->getAge();
 
                  // sql insert query
         $sqlInsertQuery = "INSERT INTO person(prenom, nom, age) 
-                            VALUES('$firstName', 
-                                    '$lastName',
+                            VALUES('$prenom', 
+                                    '$nom',
                                     '$age')";
 
         mysqli_query($conn, $sqlInsertQuery);

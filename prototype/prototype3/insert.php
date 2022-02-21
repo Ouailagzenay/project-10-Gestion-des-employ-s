@@ -8,11 +8,11 @@
 		$person = new Person();	
 		$personManager = new PersonManager();
 
-        $person->setprenom($_POST['fname']);
-        $person->setnom($_POST['lname']);
-        $person->setAge($_POST['age']);
+        $person->setprenom($_POST['Prenom']);
+        $person->setnom($_POST['Nom']);
+        $person->setAge($_POST['Age']);
 
-		$personManager->insertEmployee($conn, $person);
+		$personManager->insertPerson($conn, $person);
      
         header("Location: index.php");
 
@@ -25,20 +25,20 @@
 		<div><h3>Create a User</h3>
         <form method="POST" action="">
 			<div>
-				<label for="inputFName">First Name</label>
-				<input type="text" required="required" id="inputFName" name="fname" placeholder="First Name">
+				<label for="inputPrenom">First Name</label>
+				<input type="text" required="required" id="inputPrenom" name="Prenom" placeholder="First Name">
 				<span></span>
 			</div>
 			
 			<div>
-				<label for="inputLName">Last Name</label>
-				<input type="text" required="required" id="inputLName" name="lname" placeholder="Last Name">
+				<label for="inputNom">Last Name</label>
+				<input type="text" required="required" id="inputNom" name="Nom" placeholder="Last Name">
         		<span></span>
 			</div>
 			
 			<div>
 				<label for="inputAge">Age</label>
-				<input type="number" required="required" class="form-control" id="inputAge" name="age" placeholder="Age">
+				<input type="number" required="required" class="form-control" id="inputAge" name="Age" placeholder="Age">
 				<span></span>
 			</div>
 			<div class="form-actions">
