@@ -8,11 +8,11 @@
 		$person = new Person();	
 		$personManager = new PersonManager();
 
-        $person->setFirstName($_POST['fname']);
-        $person->setLastName($_POST['lname']);
+        $person->setprenom($_POST['fname']);
+        $person->setnom($_POST['lname']);
         $person->setAge($_POST['age']);
 
-		$personManager->insertperson($conn, $person);
+		$personManager->insertEmployee($conn, $person);
      
         header("Location: index.php");
 

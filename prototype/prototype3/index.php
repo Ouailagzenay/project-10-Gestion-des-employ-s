@@ -21,16 +21,16 @@
             </tr>
 
             <?php
-                    foreach($data as $person){
+                    foreach($data as $value){
             ?>
 
             <tr>
-                <td><?= $person['prenom']?></td>
-                <td><?= $person['nom']?></td>
-                <td><?= $person['age']?></td>
+                <td><?= $value['prenom']?></td>
+                <td><?= $value['nom']?></td>
+                <td><?= $value['age']?></td>
                 <td>
-                    <a href="edit.php?id=<?php echo $person['id'] ?>">Edit</a>
-                    <a href="delete.php?id=<?php echo $person['id'] ?>">delete</a>
+                    <a href="edit.php?id=<?php echo $value['id'] ?>">Edit</a>
+                    <a href="delete.php?id=<?php echo $value['id'] ?>">delete</a>
                 </td>
             </tr>
             <?php }?>

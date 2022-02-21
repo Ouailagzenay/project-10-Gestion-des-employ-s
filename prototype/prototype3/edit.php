@@ -13,8 +13,8 @@
 
     if(isset($_POST['update'])){
         $person = new person();
-        $person->setFirstName($_POST['fname']);
-        $person->setLastName($_POST['lname']);
+        $person->setprenom($_POST['fname']);
+        $person->setnom($_POST['lname']);
         $person->setAge($_POST['age']);
 
         $personManager->editperson($conn, $person, $id);

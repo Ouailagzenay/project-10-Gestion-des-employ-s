@@ -1,8 +1,8 @@
 <?php
     class Person {
         private $id;
-        private $firstName;
-        private $lastName;
+        private $prenom;
+        private $nom;
         private $age;
 
         public function getId(){
@@ -12,20 +12,20 @@
             $this->id = $value;
         }
 
-        public function getFirstName(){
-            return $this->firstName;
+        public function getprenom(){
+            return $this->prenom;
         }
 
-        public function setFirstName($value){
-            $this->firstName = $value;
+        public function setprenom($value){
+            $this->prenom = $value;
         }
 
-        public function getLastName(){
-            return $this->lastName;
+        public function getnom(){
+            return $this->nom;
         }
 
-        public function setLastName($value){
-            $this->lastName= $value;
+        public function setnom($value){
+            $this->nom= $value;
         }
         public function getAge(){
             return $this->age;

@@ -10,7 +10,7 @@
         }
 
 
-        public function insertperson($conn, $person){
+        public function insertEmployee($conn, $person){
             $firstName = $person->getFirstName();
             $lastName = $person->getLastName();
             $age = $person->getAge();
@@ -33,13 +33,13 @@
 
 
         public function editPerson($conn, $person, $id){
-            $first_name = $person->getFirstName();
-            $last_name = $person->getLastName();
+            $prenom = $person->getprenom();
+            $nom = $person->getnom();
             $age = $person->getAge();
      
             // Update query
             $sqlUpdateQuery = "UPDATE person SET 
-                         prenom='$first_name', nom='$last_name', age='$age'
+                         prenom='$prenom', nom='$nom', age='$age'
                          WHERE id=$id";
      
              // Make query 
