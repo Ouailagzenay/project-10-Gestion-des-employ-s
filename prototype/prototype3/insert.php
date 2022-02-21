@@ -8,8 +8,8 @@
 		$person = new Person();	
 		$personManager = new PersonManager();
 
-        $person->setprenom($_POST['Prenom']);
-        $person->setnom($_POST['Nom']);
+        $person->setPrenom($_POST['Prenom']);
+        $person->setNom($_POST['Nom']);
         $person->setAge($_POST['Age']);
 
 		$personManager->insertPerson($conn, $person);
@@ -46,7 +46,7 @@
 					<a href="index.php">Back</a>
 			</div>
 		</form>
-        </div></div>        
+              
 </div>
 </body>
 </html>

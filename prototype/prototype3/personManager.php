@@ -11,8 +11,8 @@
 
 
         public function insertPerson($conn, $person){
-            $prenom = $person->getprenom();
-            $nom = $person->getnom();
+            $prenom = $person->getPrenom();
+            $nom = $person->getNom();
             $age = $person->getAge();
 
                  // sql insert query
@@ -33,8 +33,8 @@
 
 
         public function modifferPerson($conn, $person, $id){
-            $prenom = $person->getprenom();
-            $nom = $person->getnom();
+            $prenom = $person->getPrenom();
+            $nom = $person->getNom();
             $age = $person->getAge();
      
             // Update query

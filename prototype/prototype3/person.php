@@ -12,19 +12,19 @@
             $this->id = $value;
         }
 
-        public function getprenom(){
+        public function getPrenom(){
             return $this->prenom;
         }
 
-        public function setprenom($value){
+        public function setPrenom($value){
             $this->prenom = $value;
         }
 
-        public function getnom(){
+        public function getNom(){
             return $this->nom;
         }
 
-        public function setnom($value){
+        public function setNom($value){
             $this->nom= $value;
         }
         public function getAge(){
