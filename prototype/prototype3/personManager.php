@@ -2,7 +2,7 @@
 
     class PersonManager {
 
-        public function getAllpersons($conn){
+        public function getToutPerson($conn){
             $sqlGetData = 'SELECT id, prenom, nom, age FROM person';
             $result = mysqli_query($conn ,$sqlGetData);
             $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -25,14 +25,14 @@
         }
 
 
-        public function deletePerson($conn, $id){
+        public function suprimerPerson($conn, $id){
             $sqlDeleteQuery = "DELETE FROM person WHERE id= '$id'";
 
             mysqli_query($conn, $sqlDeleteQuery);
         }
 
 
-        public function editPerson($conn, $person, $id){
+        public function modifferPerson($conn, $person, $id){
             $prenom = $person->getprenom();
             $nom = $person->getnom();
             $age = $person->getAge();

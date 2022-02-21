@@ -3,7 +3,7 @@
     include 'personManager.php';
 
     $personManager = new PersonManager();
-    $data = $personManager->getAllpersons($conn);
+    $data = $personManager->getToutPerson($conn);
 
 ?>
 
@@ -29,8 +29,8 @@
                 <td><?= $value['nom']?></td>
                 <td><?= $value['age']?></td>
                 <td>
-                    <a href="edit.php?id=<?php echo $value['id'] ?>">Moffier</a>
-                    <a href="delete.php?id=<?php echo $value['id'] ?>">suprimer</a>
+                    <a href="modiffer.php?id=<?php echo $value['id'] ?>">Modiffer</a>
+                    <a href="suprimer.php?id=<?php echo $value['id'] ?>">suprimer</a>
                 </td>
             </tr>
             <?php }?>
