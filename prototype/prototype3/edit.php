@@ -1,49 +1,79 @@
 <?php
-    include 'config.php';
-    include 'person.php';
-    include 'personManager.php';
+    include 'employeeManager.php';
 
-    $personManager = new PersonManager();
+    $employeeManager = new EmployeeManager();
 
     if(isset($_GET['id'])){
         $id = $_GET['id'];
-        $person = $personManager->getPerson($conn, $id);
+        $employee = $employeeManager->getEmployee($id);
 
     }
 
     if(isset($_POST['update'])){
-        $person = new person();
-        $person->setprenom($_POST['fname']);
-        $person->setnom($_POST['lname']);
-        $person->setAge($_POST['age']);
+		$id = $_POST['id'];
+		$first_name = $_POST['first_name'];
+		$last_name = $_POST['last_name'];
+		$age = $_POST['age'];
+  
 
-        $personManager->editperson($conn, $person, $id);
+        $employeeManager->editEmployee($id, $first_name, $last_name, $age);
 
         header('Location: index.php');
         
     }
 ?>
 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <body>
 <div>
         <div>
 		<div><h3>Create a User</h3>
         <form method="POST" action="">
+			<input type="hidden" id='id' name='id' value=<?php echo $employee->getId() ?>>
 			<div>
 				<label for="inputFName">First Name</label>
-				<input type="text" required="required" id="inputFName" value=<?php echo $person['prenom']?> name="fname" placeholder="First Name">
+				<input	type="text" 
+						required="required" 
+						id="inputFName" 
+						value=<?php echo $employee->getFirstName()?> 
+						name="first_name" 
+						placeholder="First Name"
+					>
 				<span></span>
 			</div>
 			
 			<div>
 				<label for="inputLName">Last Name</label>
-				<input type="text" required="required" id="inputLName" value=<?php echo $person['nom']?> name="lname" placeholder="Last Name">
+				<input	type="text" 
+						required="required" 
+						id="inputLName" 
+						value=<?php echo $employee->getLastName()?> 
+						name="last_name" 
+						placeholder="Last Name"
+					>
         		<span></span>
 			</div>
 			
 			<div>
 				<label for="inputAge">Age</label>
-				<input type="number" required="required" class="form-control" id="inputAge" value=<?php echo $person['age']?> name="age" placeholder="Age">
+				<input	type="number" 
+						required="required" 
+						class="form-control" 
+						id="inputAge" 
+						value=<?php echo $employee->getAge()?> 
+						name="age" 
+						placeholder="Age"
+					>
 				<span></span>
 			</div>
 			<div class="form-actions">

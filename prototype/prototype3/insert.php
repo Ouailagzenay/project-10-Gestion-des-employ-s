@@ -1,52 +1,61 @@
 <?php
-
-    include 'config.php';
-	include 'person.php';
-	include 'personManager.php';
+	include 'employeeManager.php';
 
     if(!empty($_POST)){
-		$person = new Person();	
-		$personManager = new PersonManager();
+		$employee = new Employee();	
+		$employeeManager = new EmployeeManager();
 
-        $person->setPrenom($_POST['Prenom']);
-        $person->setNom($_POST['Nom']);
-        $person->setAge($_POST['Age']);
+        $employee->setFirstName($_POST['fname']);
+        $employee->setLastName($_POST['lname']);
+        $employee->setAge($_POST['age']);
+       
 
-		$personManager->insertPerson($conn, $person);
+		$employeeManager->insertEmployee($employee);
      
         header("Location: index.php");
 
     }
 ?>
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <body>
 <div>
         <div>
 		<div><h3>Create a User</h3>
         <form method="POST" action="">
 			<div>
-				<label for="inputPrenom">First Name</label>
-				<input type="text" required="required" id="inputPrenom" name="Prenom" placeholder="First Name">
+				<label for="inputFName">First Name</label>
+				<input type="text" required="required" id="inputFName" name="fname" placeholder="First Name">
 				<span></span>
 			</div>
 			
 			<div>
-				<label for="inputNom">Last Name</label>
-				<input type="text" required="required" id="inputNom" name="Nom" placeholder="Last Name">
+				<label for="inputLName">Last Name</label>
+				<input type="text" required="required" id="inputLName" name="lname" placeholder="Last Name">
         		<span></span>
 			</div>
 			
 			<div>
 				<label for="inputAge">Age</label>
-				<input type="number" required="required" class="form-control" id="inputAge" name="Age" placeholder="Age">
+				<input type="number" required="required" class="form-control" id="inputAge" name="age" placeholder="Age">
 				<span></span>
 			</div>
+			
+    
 			<div class="form-actions">
 					<button type="submit">Create</button>
 					<a href="index.php">Back</a>
 			</div>
 		</form>
-              
+        </div></div>        
 </div>
 </body>
 </html>

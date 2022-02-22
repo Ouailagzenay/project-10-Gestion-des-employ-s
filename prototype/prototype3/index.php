@@ -1,36 +1,35 @@
 <?php
-    include 'config.php';
-    include 'personManager.php';
+    include 'employeeManager.php';
 
-    $personManager = new PersonManager();
-    $data = $personManager->getToutPerson($conn);
+    $employeeManager = new EmployeeManager();
+    $data = $employeeManager->getAllEmployees();
 
 ?>
-
-
 
 <body>
     <div>
         <a href="insert.php">Insert Data</a>
         <table>
             <tr>
-                <th>Prenom</th>
-                <th>Nom</th>
+                <th>First Name</th>
+                <th>Last Name</th>
                 <th>Age</th>
+                <th>Gender</th>
                 <th>Action</th>
             </tr>
 
             <?php
-                    foreach($data as $value){
+                    foreach($data as $employee){
             ?>
 
             <tr>
-                <td><?= $value['prenom']?></td>
-                <td><?= $value['nom']?></td>
-                <td><?= $value['age']?></td>
+                <td><?= $employee->getFirstName()?></td>
+                <td><?= $employee->getLastName()?></td>
+                <td><?= $employee->getAge()?></td>
+                
                 <td>
-                    <a href="modiffer.php?id=<?php echo $value['id'] ?>">Modiffer</a>
-                    <a href="suprimer.php?id=<?php echo $value['id'] ?>">suprimer</a>
+                    <a href="edit.php?id=<?php echo $employee->getId() ?>">Edit</a>
+                    <a href="delete.php?id=<?php echo $employee->getId() ?>">delete</a>
                 </td>
             </tr>
             <?php }?>
