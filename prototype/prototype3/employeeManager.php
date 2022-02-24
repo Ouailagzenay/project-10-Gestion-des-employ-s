@@ -40,7 +40,7 @@
             $firstName = $employee->getFirstName();
             $lastName = $employee->getLastName();
             $age = $employee->getAge();
-            $gender = $employee->getGender();
+            
 
                  // sql insert query
         $sqlInsertQuery = "INSERT INTO employes1(Nom, Prenom, Age) 
