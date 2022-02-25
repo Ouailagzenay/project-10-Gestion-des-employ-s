@@ -1,0 +1,125 @@
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+.btn.btn-primary{
+  background-color:#189AB4 ;
+}
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url('../fonts/montserrat/Montserrat-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url('../fonts/montserrat/Montserrat-Medium.ttf'); 
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ Table ]*/
+
+.limiter {
+  width: 87%;
+  margin: 0 auto;
+}
+
+.container-table100 {
+  width: 100%;
+  min-height: 50vh;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 33px 30px;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Table ]*/
+table {
+  width: 100%;
+  background-color: #fff;
+}
+
+th, td {
+  font-weight: unset;
+  padding-right: 10px;
+}
+
+.column100.column7 {
+  width: 252px;
+  padding-left: 20px;
+}
+.column100.column3 {
+  width: 380px;
+  font-size: 14px;
+}
+
+.column71 a{
+  font-size: 20px;
+  padding-left: 20px;
+  color: #189AB4;
+}
+
+.column100  {
+  width: 250px;
+  padding-left: 41px;
+}
+
+.row100.head th {
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+.row100 td {
+  padding-top: 18px;
+  padding-bottom: 14px;
+}
+
+
+
+/*==================================================================
+[ Ver2 ]*/
+
+.ver2 {
+  border: 2px solid;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.table100.ver2 tbody tr:nth-child(even) {
+  background-color: #76919e;
+}
+
+.table100.ver2 td {
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.4;
+}
+
+.table100.ver2 th {
+  font-family: Montserrat-Medium;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.4;
+  text-transform: uppercase;
+  background-color: #05445E;
+}
+tr {
+  border: 1px solid;
+}
+
+
+
+
+
+
+
