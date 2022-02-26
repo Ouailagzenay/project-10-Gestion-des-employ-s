@@ -41,18 +41,17 @@
 					<div class="">
 						<input type="date" style="width:350px ;margin-top:20px; height: 40px; border-radius: 10px;border:1px solid" class="col-6 " name="dateNaissance" placeholder="Date de Naissance" required>
 					</div>
-					<div class="">
-					<select class="form-select "required style="width:350px ;margin-top:20px;margin-left:180px; height: 40px; border-radius: 10px;border:1px solid ;" class="col-6"  name="Département"  aria-label="Default select example">
+					<div>
+					        <select class="form-select "required style="width:350px ;margin-top:20px;margin-left:200px; height: 40px; border-radius: 10px;border:1px solid ;" class="col-6"  name="Département"  aria-label="Default select example">
 										<option selected>Département...</option>
 										<option value="Accounting">Accounting</option>
 										<option value="Marketing">Marketing</option>
 										<option value="Production">Production</option>
 										<option value="I.T">I.T</option>
-									</select>
+							</select>
 					</div>
-					<div class="">
-                               
-									<select class="form-select" class="" required="required" name="Fonction" class="col-6" style="margin-left:180px;width:350px;margin-top:20px; height: 40px; border-radius: 10px;border:1px solid" placeholder="Function"  	aria-label="Default select example">
+                    <div>         
+					    <select class="form-select" class="" required="required" name="Fonction" class="col-6" style=";width:350px;margin-top:20px;margin-left:200px; height: 40px; border-radius: 10px;border:1px solid" placeholder="Function"  	aria-label="Default select example">
 										<option selected>Function...</option>
 										<option value="auditor">auditor</option>
 										<option value="CFO" >CFO</option>
@@ -60,17 +59,14 @@
 										<option value="tax specialist" >tax specialist</option>
 										<option value="advertising manager" >advertising manager</option>
 										<option value="brand manager">brand manager</option>
-</select >
-										</div>
-									
+                        </select >     
+					</div>		
 					
 					
 					<div class="">
 						<input type="number" style="width:350px;margin-top:20px; height: 40px; border-radius: 10px;border:1px solid" class="col-6" name="Salaire" placeholder="Salaire" required>
 					</div>
-					<div>
-						
-					</div>
+					
 					<div class="">
 						<input type="file" style="margin-top:20px;margin-bottom:20px; height: 40px;" class="col-6" name="uploadfile" placeholder="Photo" value="" required >
 					</div>
