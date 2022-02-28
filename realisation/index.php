@@ -17,7 +17,8 @@
 	
 	<nav style="background-color: #05445E;" class="navbar navbar-dark ">
     <div class="container-fluid">
-    <a class="navbar-brand">Navbar</a>
+    <a class="navbar-brand"><img src="images/stisla.png" alt="logo"></a>
+	
     <form class="d-flex">
       <input class="form-control me-2" type="search" placeholder="Search.." id="myInput" aria-label="Search">
       

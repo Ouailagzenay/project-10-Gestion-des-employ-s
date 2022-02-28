@@ -42,7 +42,7 @@
 						<input type="date" style="width:350px ;margin-top:20px; height: 40px; border-radius: 10px;border:1px solid" class="col-6 " name="dateNaissance" placeholder="Date de Naissance" required>
 					</div>
 					<div>
-					        <select class="form-select "required style="width:350px ;margin-top:20px;margin-left:200px; height: 40px; border-radius: 10px;border:1px solid ;" class="col-6"  name="Département"  aria-label="Default select example">
+					        <select class="form-select "required style="width:350px ;margin-top:20px;margin-left:250px; height: 40px; border-radius: 10px;border:1px solid ;" class="col-6"  name="Département"  aria-label="Default select example">
 										<option selected>Département...</option>
 										<option value="Accounting">Accounting</option>
 										<option value="Marketing">Marketing</option>
@@ -51,7 +51,7 @@
 							</select>
 					</div>
                     <div>         
-					    <select class="form-select" class="" required="required" name="Fonction" class="col-6" style=";width:350px;margin-top:20px;margin-left:200px; height: 40px; border-radius: 10px;border:1px solid" placeholder="Function"  	aria-label="Default select example">
+					    <select class="form-select" class="" required="required" name="Fonction" class="col-6" style="width:350px;margin-top:20px;margin-left:250px; height: 40px; border-radius: 10px;border:1px solid" placeholder="Function"  	aria-label="Default select example">
 										<option selected>Function...</option>
 										<option value="auditor">auditor</option>
 										<option value="CFO" >CFO</option>
@@ -68,7 +68,7 @@
 					</div>
 					
 					<div class="">
-						<input type="file" style="margin-top:20px;margin-bottom:20px; height: 40px;" class="col-6" name="uploadfile" placeholder="Photo" value="" required >
+						<input type="file" style="margin-top:20px;margin-bottom:20px; height: 40px; margin-left : 100px" class="col-6" name="uploadfile" placeholder="Photo" value="" required >
 					</div>
 	            <div class="">
 	            	<button type="submit" style="width:350px ;background-color: #189AB4 ;" class="  btn btn-primary submit px-3" >Ajouter</button>

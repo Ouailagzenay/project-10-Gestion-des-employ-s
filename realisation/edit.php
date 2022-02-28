@@ -60,7 +60,7 @@
 						<input type="Date" style="width:350px ;margin-top:20px; height: 40px; border-radius: 10px;border:1px solid" class="col-6 " value=<?php echo $employee->getDateNaissance()?> name="dateNaissance"  required>
 					</div>
 					<div class="" >
-					<select class="form-select "required style="width:350px ;margin-top:20px;margin-left:200px; height: 40px; border-radius: 10px;border:1px solid ;" class="col-6"  name="Déoartement"  aria-label="Default select example">
+					<select class="form-select "required style="width:350px ;margin-top:20px;margin-left:250px; height: 40px; border-radius: 10px;border:1px solid ;" class="col-6"  name="Déoartement"  aria-label="Default select example">
 										<option selected>Département...</option>
 										<option value="Accounting" <?= $employee->getDéoartement()== 'Accounting' ? 'selected' : '' ?>>Accounting</option>
 										<option value="Marketing" <?= $employee->getDéoartement()== 'Marketing' ? 'selected' : '' ?>>Marketing</option>
@@ -70,7 +70,7 @@
 					</div>
 					<div class="">
                                
-									<select class="form-select" class="" required name="Fonction" class="col-6" style="margin-left:200px;width:350px;margin-top:20px; height: 40px; border-radius: 10px;border:1px solid" placeholder="Function"  	aria-label="Default select example">
+									<select class="form-select" class="" required name="Fonction" class="col-6" style="margin-left:250px;width:350px;margin-top:20px; height: 40px; border-radius: 10px;border:1px solid" placeholder="Function"  	aria-label="Default select example">
 										<option selected>Function...</option>
 										<option value="auditor" <?= $employee->getFonction()== 'auditor' ? 'selected' : '' ?>>auditor</option>
 										<option value="CFO" <?= $employee->getFonction()== 'CFO' ? 'selected' : '' ?>>CFO</option>
@@ -86,7 +86,7 @@
 					</div>
 					<div class="">
 
-						<input type="file" style="width:350px;margin-top:20px;margin-bottom:20px; height: 40px; margin-left:20px;" class="col-6" value=<?php echo './images/'.$employee->getPhoto(); ?> name="uploadfile"  required >
+						<input type="file" style="width:350px;margin-top:20px;margin-bottom:20px; height: 40px; margin-left:40px;" class="col-6" value=<?php echo './images/'.$employee->getPhoto(); ?> name="uploadfile"  required >
 					</div>
 	            <div class="">
 	            	<button type="submit" name="update" style="width:350px; background-color:#189AB4;" class="  btn btn-primary submit px-3" >Modiffer</button>
